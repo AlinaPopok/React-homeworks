@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Item = ({task, onRemove}) => {
     return <div>
         <div className="row">
@@ -9,4 +11,10 @@ const Item = ({task, onRemove}) => {
         <hr></hr>
     </div>;
 };
+
+Item.propTypes = {
+    task: PropTypes.object.isRequired,
+    onRemove: PropTypes.func.isRequired
+};
+
 export default Item;
